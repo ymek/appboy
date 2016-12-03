@@ -5,8 +5,11 @@ describe 'schedule messages' do
   let(:messages) { build(:messages) }
 
   subject(:schedule_messages) do
-    api.schedule_messages(send_at: test_time,
-      messages: messages, segment_id: segment_id)
+    api.schedule_messages(
+      send_at: test_time,
+      messages: messages,
+      segment_id: segment_id
+    )
   end
 
   context 'with success', vcr: true do
@@ -16,8 +19,8 @@ describe 'schedule messages' do
 
     it 'responds with success message' do
       expect(JSON.parse(schedule_messages.body)).to eq(
-          'message' => 'success'
-        )
+        'message' => 'success'
+      )
     end
   end
 

@@ -12,6 +12,6 @@ require 'support/integrations'
 
 RSpec.configure do |config|
   def test_time
-    Time.parse('2015-02-15 00:00:00 -0500')
+    Time.parse('2016-12-15 00:00:00 -0500').utc
   end
 end

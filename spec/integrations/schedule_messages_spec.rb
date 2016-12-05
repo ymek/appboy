@@ -19,6 +19,7 @@ describe 'schedule messages' do
 
     it 'responds with success message' do
       expect(JSON.parse(schedule_messages.body)).to eq(
+        'schedule_id' => appboy_schedule_id,
         'message' => 'success'
       )
     end

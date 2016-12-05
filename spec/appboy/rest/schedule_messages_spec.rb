@@ -2,13 +2,14 @@ require 'spec_helper'
 
 describe Appboy::REST::ScheduleMessages do
   let(:http) { double(:http) }
+   let(:messages) { [build(:messages)] }
 
   let(:payload) {{
     send_at: :send_at,
     segment_id: :segment_id,
     external_user_ids: :external_user_ids,
     campaign_id: :campaign_id,
-    messages: :messages,
+    messages: messages,
     local_timezone: :in_local_time
   }}
 
@@ -30,7 +31,7 @@ describe Appboy::REST::ScheduleMessages do
       external_user_ids: :external_user_ids,
       segment_id: :segment_id,
       campaign_id: :campaign_id,
-      messages: :messages,
+      messages: messages,
       schedule: {
         time: :send_at,
         in_local_time: :in_local_time

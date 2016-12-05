@@ -5,12 +5,12 @@ http_interactions:
     uri: https://api.appboy.com/users/track
     body:
       encoding: UTF-8
-      string: '{"app_group_id":"<APPBOY_GROUP_ID>","attributes":[{"external_id":1,"foo":"bar"}],"events":[{"external_id":1,"name":"baz","time":"2015-02-15
-        00:00:00 -0500"}],"purchases":[{"external_id":1,"product_id":1,"time":"2015-02-15
-        00:00:00 -0500","currency":"CAD","price":1.0}]}'
+      string: '{"app_group_id":"<APPBOY_GROUP_ID>","attributes":[{"external_id":1,"foo":"bar"}],"events":[{"external_id":1,"name":"baz","time":"2016-12-15
+        05:00:00 UTC"}],"purchases":[{"external_id":1,"product_id":1,"time":"2016-12-15
+        05:00:00 UTC","currency":"CAD","price":1.0}]}'
     headers:
       User-Agent:
-      - Faraday v0.9.1
+      - Faraday v0.10.0
       Content-Type:
       - application/json
       Accept-Encoding:
@@ -22,35 +22,49 @@ http_interactions:
       code: 201
       message: Created
     headers:
-      Server:
-      - nginx/1.6.2
-      Date:
-      - Mon, 16 Feb 2015 02:04:32 GMT
-      Content-Type:
-      - application/json
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      Status:
-      - 201 Created
-      Strict-Transport-Security:
-      - max-age=31536000
-      X-Ua-Compatible:
-      - IE=Edge,chrome=1
-      Etag:
-      - '"79557eda34d1dfcacc80cdd626202b9a"'
       Cache-Control:
       - max-age=0, private, must-revalidate
+      Content-Type:
+      - application/json
+      Etag:
+      - W/"79557eda34d1dfcacc80cdd626202b9a"
+      Server:
+      - nginx/1.10.2
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Ratelimit-Limit:
+      - '50000'
+      X-Ratelimit-Remaining:
+      - '49995'
+      X-Ratelimit-Reset:
+      - '1480978800'
       X-Request-Id:
-      - 68c4d37952f3f900cd83820409e74696
+      - 797bb8e0-c57e-4169-9eed-e6ecadee2cf6
       X-Runtime:
-      - '0.008458'
+      - '0.028924'
+      Content-Length:
+      - '85'
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Mon, 05 Dec 2016 22:24:57 GMT
+      Via:
+      - 1.1 varnish
+      Connection:
+      - keep-alive
+      X-Served-By:
+      - cache-sea1926-SEA
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      X-Timer:
+      - S1480976697.021077,VS0,VE98
       Vary:
       - Accept-Encoding
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: '{"attributes_processed":1,"events_processed":1,"purchases_processed":1,"message":"success"}'
     http_version: 
-  recorded_at: Mon, 16 Feb 2015 02:04:32 GMT
-recorded_with: VCR 2.9.2
+  recorded_at: Mon, 05 Dec 2016 22:24:57 GMT
+recorded_with: VCR 3.0.3

@@ -22,4 +22,9 @@ RSpec.configure do |config|
   def appboy_test_segment
     ::ENV.fetch('APPBOY_TEST_SEGMENT', 'fake-test-segment')
   end
+
+  def appboy_schedule_id
+    @appboy_schedule_id ||= 'fake-schedule-id'
+    @appboy_schedule_id
+  end
 end

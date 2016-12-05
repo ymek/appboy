@@ -5,7 +5,7 @@ module Integrations
 
   included do
     let(:app_group_id) { appboy_group_id }
-    let(:segment_id) { ENV.fetch('APPBOY_TEST_SEGMENT') }
+    let(:segment_id) { appboy_test_segment }
     let(:api) { Appboy::API.new(app_group_id) }
   end
 

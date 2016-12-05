@@ -3,6 +3,7 @@ require 'vcr'
 VCR.configure do |config|
   config.filter_sensitive_data('<APPBOY_GROUP_ID>') { appboy_group_id }
   config.filter_sensitive_data('<APPBOY_TEST_SEGMENT>') { appboy_test_segment }
+  config.define_cassette_placeholder('<APPBOY_SCHEDULE_ID>') { appboy_schedule_id }
 
   config.cassette_library_dir = 'spec/fixtures/responses'
 

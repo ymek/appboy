@@ -18,4 +18,8 @@ RSpec.configure do |config|
   def appboy_group_id
     ::ENV.fetch('APPBOY_GROUP_ID', 'fake-group-id')
   end
+
+  def appboy_test_segment
+    ::ENV.fetch('APPBOY_TEST_SEGMENT')
+  end
 end

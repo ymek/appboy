@@ -20,6 +20,6 @@ RSpec.configure do |config|
   end
 
   def appboy_test_segment
-    ::ENV.fetch('APPBOY_TEST_SEGMENT')
+    ::ENV.fetch('APPBOY_TEST_SEGMENT', 'fake-test-segment')
   end
 end

@@ -25,7 +25,10 @@ module Appboy
       private
 
       def update_scheduled_push
-        http.post('/messages/schedule/update', post_params.merge(schedule_id: schedule_id))
+        http.post(
+          '/messages/schedule/update',
+          post_params.merge(schedule_id: schedule_id)
+        )
       end
 
       def create_scheduled_push
